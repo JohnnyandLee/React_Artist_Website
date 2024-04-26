@@ -1,0 +1,18 @@
+footer{
+    background-color:#132A3E;
+    text-align: center;
+    position:fixed;
+    right:0;
+    left:0;
+    bottom:0;
+    /* margin-top: 535px; */
+}
+
+#bottomword{
+    color:white;
+}
+
+#artsylink{
+    color:white;
+    text-decoration: none;
+}

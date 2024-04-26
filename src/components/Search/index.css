@@ -1,0 +1,14 @@
+#lefttopword{
+    font-size: 20px;
+    margin-left:10px;
+    margin-top:5px;
+}
+
+#inputsend{
+    background-color: #205375;
+    color:white;
+}
+
+#firstSpin{
+    display:none;
+}
