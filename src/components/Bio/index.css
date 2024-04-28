@@ -1,0 +1,47 @@
+#secondSpin{
+    position:relative;
+    margin-top:280px;
+ }
+
+#twoButton{
+    position:relative;
+    margin-top:280px;
+ }
+
+ #buttonBlue{
+    background-color: #205375;
+    color:white;
+ }
+
+ #buttonWhite{
+    background-color: white;
+    color:#205375;
+ }
+
+ #showID{
+   background-color: white;
+   margin-top:30px;
+ }
+
+ #artistinfo{
+   text-align:center; 
+   font:20px Arial, sans-serif;
+}
+
+#artistnation{
+   text-align:center; 
+   top:20px; font:16px Arial, sans-serif;
+}
+
+#artistmiss{
+   position:relative; 
+   top:30px; 
+   text-align:center; 
+   font:24px Arial, sans-serif;
+}
+
+#artistbio{
+   text-align: justify;
+   text-justify:inter-ideograph;
+   font:12px Arial, sans-serif;
+}

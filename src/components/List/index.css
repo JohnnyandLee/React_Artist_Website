@@ -1,0 +1,32 @@
+#show{
+    position:absolute;
+    left:50%;
+    margin-top:20px;
+    margin-left:-500px;
+    text-align:center; 
+    width:900px; 
+    height:250px;
+    gap: var(--size-3);
+    overflow: auto;
+    white-space: nowrap;
+ }
+
+ .divmiddle{
+    display:inline-block;
+    background-color:  #205375;
+ }
+
+ .divmiddle:hover{
+   background-color: #112B3C;
+}
+
+ .blank{
+    display:inline-block;
+    width:5px;
+ }
+
+ .artists{
+   font: 14px Arial, sans-serif;
+   color:white;
+   margin-top:5px;
+}
