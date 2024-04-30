@@ -5,30 +5,29 @@ const List = ({artistList, notArtist, secondSpinChange, fillArtistBio, fillArtwo
     let chooseArtist = (url) => {
         secondSpinChange(true);
 
-        const data = {
+        const addressObj = {
             "address": url
         }
 
-        postData("http://localhost:8080/artistEndpoint", data)
+        postData("http://localhost:8080/artistEndpoint", addressObj)
           .then((data) => {
-               console.log("bio", data);
-               fillArtistBio(data);
-               secondSpinChange(false);
-
-               searchArtworks(data["artworks"]);
-           })
+               searchArtworks(data["artworks"])
+               .then(() => {
+                   fillArtistBio(data);
+                   secondSpinChange(false);
+               })  
+           })  
     }
 
     let searchArtworks = (url) => {
-        const data = {
+        const addressObj = {
             "address": url
         }
 
-        postData("http://localhost:8080/artworkEndpoint", data)
-          .then((data) => {
-              console.log("artwork", data);
-              fillArtwork(data);
-           })
+        return postData("http://localhost:8080/artworkEndpoint", addressObj)
+                .then((data) => {
+                    fillArtwork(data);
+                })
     }
 
     return (

@@ -2,6 +2,28 @@ import './index.css'
 import Artwork from '../Artwork';
 
 const Bio = ({secondSpin, artistBio, left, chooseLeft, artworks}) => {
+    let missString = "";
+
+    if(artistBio["nationality"] === "" || artistBio["nationality"] === "null"){
+        missString += "No Nationality, ";
+    }
+
+    if(artistBio["birthday"] === "" || artistBio["birthday"] === "null"){
+        missString += "No Birth Year, ";
+    }
+
+    if(artistBio["deathday"] === "" || artistBio["deathday"] === "null"){
+        missString += "No Death Year, ";
+    }
+
+    if(artistBio["biography"] === "" || artistBio["biography"] === "null"){
+        missString += "No Biography, ";
+    }
+    
+    let length = missString.length;
+    if(length !== 0){
+        missString = missString.substring(0, length-2);
+    }
 
     let handleClick = (res) => {
         chooseLeft(res);
@@ -38,7 +60,7 @@ const Bio = ({secondSpin, artistBio, left, chooseLeft, artworks}) => {
                             <div className="col-md-12">
                                 <div id="artistinfo">{artistBio.name + " (" + artistBio.birthday + " - " + artistBio.deathday + ")"}</div>
                                 <div id="artistnation">{artistBio.nationality}</div>
-                                <div id="artistmiss"></div>
+                                <div id="artistmiss">{missString}</div>
                                 <div id="artistbio">{artistBio.biography}</div>
                             </div>
                         </div>

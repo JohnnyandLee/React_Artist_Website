@@ -44,7 +44,7 @@ const App = () => {
 
     return (
         <>
-           <Search searchNewData={artistsChange} spinChange={spinChange} spin={spin} notArtistChange={notArtistChange}/>
+           <Search searchNewData={artistsChange} spinChange={spinChange} spin={spin} notArtistChange={notArtistChange} fillArtistBio={fillArtistBio} fillArtwork={fillArtwork} chooseLeft={chooseLeft}/>
            <List artistList={artists} notArtist={notArtist} secondSpinChange={secondSpinChange} fillArtistBio={fillArtistBio} fillArtwork={fillArtwork}/>
            <Bio secondSpin={secondSpin} artistBio={artistBio} artworks={artworks} left={left} chooseLeft={chooseLeft}/>
            <Footer />
